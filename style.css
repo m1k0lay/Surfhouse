@@ -882,7 +882,7 @@ body .container footer .footer_bottom .social_icons {
 body .container footer .footer_bottom .social_icons a {
   font-size: 15px;
 }
-/* @media screen and (max-width: 720px) {
+ @media screen and (max-width: 720px) {
   body .container {
     width: auto;
     min-width: 320px;
@@ -994,5 +994,3 @@ body .container footer .footer_bottom .social_icons a {
     margin-right: 0;
   }
 }
-
-*/
