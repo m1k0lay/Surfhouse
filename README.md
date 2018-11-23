@@ -1,3 +1,2 @@
 # Surfhouse
-.psd - template.
-Designed by theuncreativelab.com.
+Based on the free .psd template designed by theuncreativelab.com.
