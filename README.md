@@ -1,3 +1,3 @@
 # Surfhouse
-.psd - template
-Designed by theuncreativelab.com
+.psd - template.
+Designed by theuncreativelab.com.
