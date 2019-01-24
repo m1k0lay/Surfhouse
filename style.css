@@ -16,31 +16,31 @@ body input:focus {
 }
 body ::selection {
   background-color: #fff51f;
-  color: grey;
+  color: black;
 }
-body .container {
+body div.container {
   width: 1500px;
   margin: 0 auto;
   background-color: #f8f8f8;
   display: flex;
   flex-flow: row wrap;
 }
-body .container header {
+body div.container header {
   position: relative;
   padding: 24px 10px 64px 10px;
   background-color: #abeafa;
   display: flex;
   flex-flow: row wrap;
-  flex: 1 1 100%;
+  flex: 0 1 100%;
 }
-body .container header .logo {
+body div.container header a.logo {
   background-image: url("img/logo.png");
   background-repeat: no-repeat;
   width: 125px;
   height: 111px;
   margin-left: 224px;
 }
-body .container header .social_icons {
+body div.container header div.social_icons {
   margin-left: 787px;
   margin-top: 25px;
   width: 125px;
@@ -48,17 +48,22 @@ body .container header .social_icons {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
+  align-items: center;
 }
-body .container header .social_icons a {
+body div.container header div.social_icons a {
   color: white;
 }
-body .container header .social_icons a:hover {
+body div.container header div.social_icons a:hover {
   color: #fff51f;
 }
-body .container header .social_icons_catalog_page {
+body div.container header div.social_icons_catalog_page {
   width: 162px;
 }
-body .container header .social_icons_catalog_page .lang_selector {
+body div.container header div.social_icons_catalog_page div.lang_selector {
+  width: 22px;
+  overflow: hidden;
+}
+body div.container header div.social_icons_catalog_page div.lang_selector select {
   text-transform: uppercase;
   font-family: Raleway;
   color: white;
@@ -66,11 +71,15 @@ body .container header .social_icons_catalog_page .lang_selector {
   font-weight: 700;
   background-color: #abeafa;
   border: none;
+  width: 40px;
+  height: 16px;
+  position: relative;
+  top: -2px;
 }
-body .container header .social_icons_catalog_page .lang_selector:focus {
+body div.container header div.social_icons_catalog_page div.lang_selector:hover {
   outline: 1px solid #fff51f;
 }
-body .container header .welcome {
+body div.container header div.welcome {
   background-color: #fff51f;
   width: 270px;
   height: 300px;
@@ -78,7 +87,7 @@ body .container header .welcome {
   margin-left: 155px;
   padding: 79px 31px 0 20px;
 }
-body .container header .welcome h3 {
+body div.container header div.welcome h3 {
   font-family: Raleway;
   color: #333333;
   font-size: 30px;
@@ -88,7 +97,7 @@ body .container header .welcome h3 {
   text-transform: uppercase;
   margin-left: 5px;
 }
-body .container header .welcome p {
+body div.container header div.welcome p {
   font-family: Raleway;
   color: #333333;
   font-size: 18px;
@@ -99,12 +108,12 @@ body .container header .welcome p {
   font-style: italic;
   word-wrap: break-word;
 }
-body .container header .slider_title {
+body div.container header div.slider_title {
   width: 300px;
   margin-left: 478px;
   margin-top: 109px;
 }
-body .container header .slider_title h3 {
+body div.container header div.slider_title h3 {
   color: #fff51f;
   font-size: 48px;
   font-weight: 400;
@@ -112,14 +121,14 @@ body .container header .slider_title h3 {
   text-align: left;
   text-transform: uppercase;
 }
-body .container header .slider_title p {
+body div.container header div.slider_title p {
   color: #fff51f;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
   text-align: left;
 }
-body .container header .slider_title input[type=button] {
+body div.container header div.slider_title input[type=button] {
   background-color: #fff51f;
   width: 127px;
   height: 49px;
@@ -132,30 +141,30 @@ body .container header .slider_title input[type=button] {
   border: none;
   cursor: pointer;
 }
-body .container header .slider_title input[type=button]:hover {
+body div.container header div.slider_title input[type=button]:hover {
   background-color: #ffff1f;
 }
-body .container header .slider_title input[type=button]:active {
+body div.container header div.slider_title input[type=button]:active {
   margin: 59px 0 0 0;
 }
-body .container .header_catalog_page,
-body .container .header_product_page,
-body .container .header_contacts_page {
+body div.container header.header_catalog_page,
+body div.container header.header_product_page,
+body div.container header.header_contacts_page {
   height: 350px;
 }
-body .container .header_contacts_page {
+body div.container header.header_contacts_page {
   padding: 0;
 }
-body .container .header_contacts_page iframe {
+body div.container header.header_contacts_page iframe {
   width: 100%;
   height: 100%;
 }
-body .container .header_contacts_page .logo {
+body div.container header.header_contacts_page a.logo {
   position: absolute;
   top: 24px;
   left: 10px;
 }
-body .container .header_contacts_page .social_icons {
+body div.container header.header_contacts_page div.social_icons {
   position: absolute;
   top: 15px;
   left: 340px;
@@ -163,13 +172,12 @@ body .container .header_contacts_page .social_icons {
   height: 35px;
   background-color: rgba(193, 193, 193, 0.8);
   justify-content: space-around;
-  align-items: center;
 }
-body .container nav {
+body div.container nav {
   width: 270px;
   margin-left: 165px;
 }
-body .container nav > ul > li {
+body div.container nav > ul > li {
   background-color: #333333;
   height: 66px;
   padding-left: 42px;
@@ -179,13 +187,13 @@ body .container nav > ul > li {
   line-height: 66px;
   text-transform: uppercase;
 }
-body .container nav ul ul li {
+body div.container nav ul ul li {
   list-style-type: none;
   text-transform: uppercase;
   position: relative;
   background-color: #26d2fc;
 }
-body .container nav ul ul li a {
+body div.container nav ul ul li a {
   white-space: nowrap;
   padding-left: 40px;
   display: block;
@@ -195,14 +203,14 @@ body .container nav ul ul li a {
   font-weight: 900;
   line-height: 36px;
 }
-body .container nav ul ul li a:hover {
+body div.container nav ul ul li a:hover {
   color: #ffffff;
   background-color: #333333;
 }
-body .container nav ul ul li:hover ul {
+body div.container nav ul ul li:hover ul {
   display: block;
 }
-body .container nav ul ul ul {
+body div.container nav ul ul ul {
   display: none;
   z-index: 1;
   position: absolute;
@@ -210,28 +218,28 @@ body .container nav ul ul ul {
   left: 270px;
   top: 0;
 }
-body .container nav ul ul ul ul {
+body div.container nav ul ul ul ul {
   left: 180px;
 }
-body .container nav ul ul ul li {
+body div.container nav ul ul ul li {
   background-color: #75e3fe;
 }
-body .container nav ul ul ul li a {
+body div.container nav ul ul ul li a {
   padding-left: 30px;
 }
-body .container nav ul ul ul li a::before {
+body div.container nav ul ul ul li a::before {
   content: "▪";
   padding-right: 10px;
   font-size: 16px;
 }
-body .container nav .ad_block {
+body div.container nav section.ad_block {
   background-color: #e0e0e0;
   width: 270px;
   height: 300px;
   padding: 129px 25px 0 142px;
   margin-top: 30px;
 }
-body .container nav .ad_block h3 {
+body div.container nav section.ad_block h3 {
   color: #333333;
   font-size: 36px;
   line-height: 36px;
@@ -240,52 +248,54 @@ body .container nav .ad_block h3 {
   font-weight: 400;
   font-style: italic;
 }
-body .container main {
+body div.container main {
   margin-left: 30px;
   width: 870px;
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;
+  /*Имееется свободное расстояние сверху, между bread_crumbs и формой, 
+   быть не должно, не знаю как выровнять (использую align-items: flex-start 
+   для main и align-self: flex-end для div.brands) */
 }
-body .container main section {
-  flex: 1 1 100%;
+body div.container main section {
+  flex: 0 1 100%;
 }
-body .container main .bread_crumbs {
+body div.container main div.bread_crumbs {
   height: 88px;
   text-transform: capitalize;
   font-size: 12px;
   font-weight: 400;
   line-height: 88px;
   color: #989898;
-  flex: 1 1 100%;
+  flex: 0 1 100%;
 }
-body .container main .bread_crumbs span:nth-child(n+2)::before {
+body div.container main div.bread_crumbs span:nth-child(n+2)::before {
   content: "» ";
 }
-body .container main .bread_crumbs span a {
+body div.container main div.bread_crumbs span a {
   color: #989898;
   line-height: 12px;
 }
-body .container main .bread_crumbs span:last-child a {
+body div.container main div.bread_crumbs span:last-child a {
   background-color: #faef03;
   padding: 4px;
 }
-body .container main .new_products {
+body div.container main section.new_products {
   background-color: #f8f8f8;
 }
-body .container main .top_products,
-body .container main .sale_products {
+body div.container main section.top_products,
+body div.container main section.sale_products {
   margin-top: 50px;
 }
-body .container main [class*=products] {
+body div.container main [class*=products] {
   padding-top: 43px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: space-between;
   position: relative;
 }
-body .container main [class*=products] h3 {
+body div.container main [class*=products] h3 {
   color: #707070;
   font-size: 22px;
   line-height: 15px;
@@ -295,7 +305,7 @@ body .container main [class*=products] h3 {
   top: 30px;
   position: absolute;
 }
-body .container main [class*=products] a {
+body div.container main [class*=products] a {
   background-color: #fff;
   display: block;
   width: 270px;
@@ -304,7 +314,7 @@ body .container main [class*=products] a {
   margin-top: 35px;
   position: relative;
 }
-body .container main [class*=products] a .product_name {
+body div.container main [class*=products] a td.product_name {
   color: #333333;
   padding-left: 5px;
   width: 150px;
@@ -316,7 +326,7 @@ body .container main [class*=products] a .product_name {
   font-style: italic;
   text-transform: uppercase;
 }
-body .container main [class*=products] a .price {
+body div.container main [class*=products] a td.price {
   color: #333333;
   font-size: 18px;
   font-weight: 900;
@@ -328,7 +338,7 @@ body .container main [class*=products] a .price {
   vertical-align: top;
   overflow: hidden;
 }
-body .container main [class*=products] a .old_price {
+body div.container main [class*=products] a td.old_price {
   color: #e24602;
   text-decoration: line-through;
   font-size: 14px;
@@ -337,7 +347,7 @@ body .container main [class*=products] a .old_price {
   text-align: right;
   padding-right: 5px;
 }
-body .container main [class*=products] a.new::after {
+body div.container main [class*=products] a.new::after {
   content: "";
   position: absolute;
   top: 0;
@@ -346,7 +356,7 @@ body .container main [class*=products] a.new::after {
   border-top: 23px solid #e24602;
   border-right: 23px solid #e24602;
 }
-body .container main [class*=products] a.new table::after {
+body div.container main [class*=products] a.new table::after {
   content: "new";
   position: absolute;
   top: 10px;
@@ -358,7 +368,7 @@ body .container main [class*=products] a.new table::after {
   text-align: center;
   z-index: 1;
 }
-body .container main [class*=products] a.hot::after {
+body div.container main [class*=products] a.hot::after {
   content: "";
   position: absolute;
   top: 0;
@@ -367,7 +377,7 @@ body .container main [class*=products] a.hot::after {
   border-top: 23px solid #faef03;
   border-right: 23px solid #faef03;
 }
-body .container main [class*=products] a.hot table::after {
+body div.container main [class*=products] a.hot table::after {
   content: "hot";
   position: absolute;
   top: 10px;
@@ -379,31 +389,31 @@ body .container main [class*=products] a.hot table::after {
   text-align: center;
   z-index: 1;
 }
-body .container main [class~=light_style] a .product_name {
+body div.container main [class~=light_style] a .product_name {
   font-weight: 600;
   line-height: 18px;
   font-style: normal;
   text-transform: capitalize;
 }
-body .container main [class~=light_style] a .price {
+body div.container main [class~=light_style] a td.price {
   font-size: 18px;
   font-weight: 600;
   font-style: normal;
 }
-body .container main [class~=light_style] a .old_price {
+body div.container main [class~=light_style] a td.old_price {
   font-weight: 600;
   font-style: normal;
 }
-body .container main [class*=products] a:hover,
-body .container main .product_images img:hover {
+body div.container main section[class*=products] a:hover,
+body div.container main div.product_images img:hover {
   box-shadow: 0 0 10px grey;
 }
-body .container main .product_section {
+body div.container main section.product_section {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
 }
-body .container main .product_section .product_images {
+body div.container main section.product_section div.product_images {
   height: 504px;
   margin-bottom: 76px;
   margin-right: 45px;
@@ -413,25 +423,23 @@ body .container main .product_section .product_images {
   align-content: space-between;
   flex: 0 1 370px;
 }
-body .container main .product_section .product_images .product_image {
+body div.container main section.product_section div.product_images img.product_image {
   width: 100%;
   background-color: #eaeaea;
 }
-body .container main .product_section .product_images .product_image_mini {
+body div.container main section.product_section div.product_images img.product_image_mini {
   background-color: #eaeaea;
   width: 70px;
   height: 110px;
 }
-body .container main .product_section .product_images .product_image_mini:nth-child(2) {
+body div.container main section.product_section div.product_images img.product_image_mini:nth-child(2) {
   margin-left: 20px;
 }
-body .container main .product_section .product_images .product_image_mini:last-child {
+body div.container main section.product_section div.product_images img.product_image_mini:last-child {
   margin-right: 20px;
-}
-body .container main .product_section .product_images .product_image_mini:last-child {
   background-color: #fff;
 }
-body .container main .product_section .product_info {
+body div.container main section.product_section div.product_info {
   margin-bottom: 76px;
   display: inherit;
   flex-flow: inherit;
@@ -439,7 +447,7 @@ body .container main .product_section .product_info {
   flex: 0 1 455px;
   align-content: baseline;
 }
-body .container main .product_section .product_info h2 {
+body div.container main section.product_section div.product_info h2 {
   text-transform: uppercase;
   color: #353535;
   font-size: 24px;
@@ -449,22 +457,22 @@ body .container main .product_section .product_info h2 {
   margin-bottom: 53px;
   flex: 1 1 455px;
 }
-body .container main .product_section .product_info .price {
+body div.container main section.product_section div.product_info div.price {
   margin-bottom: 27px;
   color: #111111;
   font-size: 22px;
   font-weight: 500;
   font-style: italic;
   line-height: 16px;
-  flex: 1 1 455px;
+  flex: 0 1 455px;
 }
-body .container main .product_section .product_info hr {
+body div.container main section.product_section div.product_info hr {
   color: rgba(51, 51, 51, 0.1);
   size: 1px;
   flex: 0 1 390px;
   height: 0;
 }
-body .container main .product_section .product_info h4 {
+body div.container main section.product_section div.product_info h4 {
   margin-top: 24px;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -473,16 +481,16 @@ body .container main .product_section .product_info h4 {
   font-weight: 400;
   line-height: 20px;
   text-align: center;
-  flex: 1 1 455px;
+  flex: 0 1 455px;
 }
-body .container main .product_section .product_info p {
+body div.container main section.product_section div.product_info p {
   color: #707070;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
   margin-bottom: 20px;
 }
-body .container main .product_section .product_info input {
+body div.container main section.product_section div.product_info input {
   background-color: #fb4d01;
   width: 130px;
   height: 48px;
@@ -495,14 +503,14 @@ body .container main .product_section .product_info input {
   font-weight: 400;
   line-height: 20px;
 }
-body .container main .product_section .product_info input:hover {
+body div.container main section.product_section div.product_info input:hover {
   background-color: #FB6201;
 }
-body .container main .product_section .product_info input:active {
+body div.container main section.product_section div.product_info input:active {
   margin-top: 20px;
   margin-bottom: 0;
 }
-body .container main .product_section .product_description {
+body div.container main section.product_section div.product_description {
   border: 1px solid rgba(51, 51, 51, 0.1);
   position: relative;
   padding: 12px;
@@ -512,7 +520,7 @@ body .container main .product_section .product_description {
   font-weight: 400;
   line-height: 15px;
 }
-body .container main .product_section .product_description::before {
+body div.container main section.product_section div.product_description::before {
   content: "product description";
   display: block;
   background-color: #26d2fc;
@@ -529,12 +537,12 @@ body .container main .product_section .product_description::before {
   left: 20px;
   top: -34px;
 }
-body .container main .might_also_like,
-body .container main .recently_viewed {
+body div.container main section.might_also_like,
+body div.container main section.recently_viewed {
   margin-top: 100px;
 }
-body .container main .might_also_like > h3,
-body .container main .recently_viewed > h3 {
+body div.container main section.might_also_like > h3,
+body div.container main section.recently_viewed > h3 {
   font-family: Raleway;
   color: #333333;
   font-size: 30px;
@@ -542,16 +550,16 @@ body .container main .recently_viewed > h3 {
   text-transform: uppercase;
   font-style: italic;
 }
-body .container main form.contacts {
-  flex: 0 1 375px;
+body div.container main form.contacts {
   display: flex;
   flex-flow: row wrap;
+  flex: 0 1 375px;
   border-right: 1px solid rgba(167, 167, 167, 0.8);
   padding-right: 25px;
 }
-body .container main form.contacts input[type=text],
-body .container main form.contacts input[type=email],
-body .container main form.contacts textarea {
+body div.container main form.contacts input[type=text],
+body div.container main form.contacts input[type=email],
+body div.container main form.contacts textarea {
   border-style: solid;
   border-width: 1px;
   border-color: #efefef;
@@ -565,58 +573,58 @@ body .container main form.contacts textarea {
   font-weight: 400;
   padding: 0 18px;
 }
-body .container main form.contacts textarea {
+body div.container main form.contacts textarea {
   height: 150px;
   padding: 18px;
   resize: none;
   overflow-y: scroll;
 }
-body .container main form.contacts label {
+body div.container main form.contacts label {
   color: #333333;
   font-size: 12px;
   line-height: 12px;
   font-weight: 600;
   text-transform: capitalize;
 }
-body .container main form.contacts input:focus,
-body .container main form.contacts textarea:focus {
+body div.container main form.contacts input:focus,
+body div.container main form.contacts textarea:focus {
   outline: 1px solid #fdf343;
 }
-body .container main .contact_data {
+body div.container main div.contact_data {
   flex: 0 1 292px;
   margin-left: 25px;
 }
-body .container main .contact_data .icon {
+body div.container main div.contact_data svg.icon {
   color: #333333;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
   margin-right: 10px;
 }
-body .container main .contact_data h2 {
+body div.container main div.contact_data h2 {
   color: #353535;
   font-size: 18px;
   font-weight: 900;
   line-height: 14px;
   margin-bottom: 15px;
 }
-body .container main .contact_data .map_data {
+body div.container main div.contact_data div.map_data {
   color: #777777;
   font-size: 12px;
   font-weight: 400;
   line-height: 14px;
 }
-body .container main .contact_data .map_data .icon {
+body div.container main div.contact_data div.map_data svg.icon {
   float: left;
 }
-body .container main .contact_data .phone_data {
+body div.container main div.contact_data p.phone_data {
   margin-top: 20px;
   color: #333333;
   font-size: 20px;
   font-weight: 600;
   line-height: 20.8px;
 }
-body .container main .contact_data .mail_data {
+body div.container main div.contact_data p.mail_data {
   margin-top: 20px;
   color: #333333;
   font-size: 16px;
@@ -624,28 +632,28 @@ body .container main .contact_data .mail_data {
   line-height: 24px;
   text-decoration: underline;
 }
-body .container main .contact_data .also {
+body div.container main div.contact_data p.also {
   margin-top: 30px;
   color: #333333;
   font-size: 14px;
   font-weight: 600;
   line-height: 14px;
 }
-body .container .nav_home_page,
-body .container .main_home_page {
+body div.container nav.nav_home_page,
+body div.container main.main_home_page {
   margin-bottom: 10px;
   position: relative;
   top: -20px;
 }
-body .container .brands {
+body div.container section.brands {
   background-color: #ffffff;
   display: flex;
   flex-flow: row wrap;
-  flex: 1 1 100%;
+  flex: 0 1 100%;
   justify-content: center;
   align-self: flex-end;
 }
-body .container .brands a {
+body div.container section.brands a {
   width: 146.25px;
   height: 160px;
   padding-top: 62px;
@@ -656,21 +664,24 @@ body .container .brands a {
   text-transform: uppercase;
   text-align: center;
 }
-body .container aside {
+body div.container aside {
   margin-left: 165px;
   flex: 0 1 1170px;
 }
-body .container aside section.social {
+body div.container aside section.social,
+body div.container aside div.social {
   display: flex;
   flex-flow: row wrap;
 }
-body .container aside section.social div.instagram {
+body div.container aside section.social div.instagram,
+body div.container aside div.social div.instagram {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   margin-bottom: 60px;
 }
-body .container aside section.social div.instagram p.instagram_feed {
+body div.container aside section.social div.instagram p.instagram_feed,
+body div.container aside div.social div.instagram p.instagram_feed {
   flex: 0 1 100%;
   margin-bottom: 30px;
   color: #333333;
@@ -679,101 +690,116 @@ body .container aside section.social div.instagram p.instagram_feed {
   line-height: 22px;
   text-align: center;
 }
-body .container aside section.social div.instagram p.instagram_feed .fa-instagram {
+body div.container aside section.social div.instagram p.instagram_feed svg.fa-instagram,
+body div.container aside div.social div.instagram p.instagram_feed svg.fa-instagram {
   font-size: 30px;
   position: relative;
   top: 3px;
 }
-body .container aside section.social div.instagram p.instagram_feed span {
+body div.container aside section.social div.instagram p.instagram_feed span,
+body div.container aside div.social div.instagram p.instagram_feed span {
   font-size: 18px;
 }
-body .container aside section.social div.instagram div {
+body div.container aside section.social div.instagram div,
+body div.container aside div.social div.instagram div {
   background-color: #ffffff;
   width: 185px;
   height: 185px;
   opacity: 0.5;
 }
-body .container aside section.social div.instagram div:hover {
+body div.container aside section.social div.instagram div:hover,
+body div.container aside div.social div.instagram div:hover {
   opacity: 1;
 }
-body .container aside section.social a.facebook, body .container aside section.social a.twitter, body .container aside section.social a.pinterest {
-  flex: 1 1 390px;
+body div.container aside section.social a.facebook,
+body div.container aside section.social a.twitter,
+body div.container aside section.social a.pinterest,
+body div.container aside div.social a.facebook,
+body div.container aside div.social a.twitter,
+body div.container aside div.social a.pinterest {
+  flex: 0 1 390px;
   height: 150px;
   color: white;
   text-align: center;
   font-size: 70px;
   line-height: 150px;
 }
-body .container aside section.social a.facebook {
+body div.container aside section.social a.facebook,
+body div.container aside div.social a.facebook {
   background-color: #3b5997;
 }
-body .container aside section.social a.twitter {
+body div.container aside section.social a.twitter,
+body div.container aside div.social a.twitter {
   background-color: #3fccfd;
 }
-body .container aside section.social a.pinterest {
+body div.container aside section.social a.pinterest,
+body div.container aside div.social a.pinterest {
   background-color: #cb2027;
 }
-body .container aside .social_home_page {
+body div.container aside section.social_home_page {
   background-color: #eaeaea;
   padding-top: 50px;
 }
-body .container aside .social_catalog_page {
+body div.container aside div.social_catalog_page {
   padding-top: 71px;
 }
-body .container aside .social_product_page {
+body div.container aside div.social_product_page {
   padding-top: 84px;
 }
-body .container aside .social_contacts_page {
+body div.container aside div.social_contacts_page {
   padding-top: 63px;
 }
-body .container footer {
+body div.container footer {
   background-color: #373737;
   color: #fff;
   padding-top: 30px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  flex: 1 1 100%;
+  flex: 0 1 100%;
 }
-body .container footer a {
+body div.container footer a {
   color: #fff;
 }
-body .container footer a:hover {
+body div.container footer a:hover {
   color: #faef03;
 }
-body .container footer .info_block {
+body div.container footer ul.info_block,
+body div.container footer div.info_block {
   margin: 40px 20px 0 20px;
   font-size: 12px;
   line-height: 12px;
 }
-body .container footer .info_block ul {
+body div.container footer ul.info_block ul,
+body div.container footer div.info_block ul {
   margin-top: 30px;
 }
-body .container footer .info_block li {
+body div.container footer ul.info_block li,
+body div.container footer div.info_block li {
   list-style-type: none;
   font-weight: 400;
   line-height: 18px;
 }
-body .container footer .info_block > li,
-body .container footer .info_block h4 {
+body div.container footer ul.info_block > li,
+body div.container footer div.info_block h4 {
   margin-bottom: 10px;
   font-size: 18px;
   font-weight: 400;
   line-height: 18px;
 }
-body .container footer .info_block:first-child {
+body div.container footer ul.info_block:first-child {
   margin-left: 190px;
 }
-body .container footer .info_block:nth-last-child(2) {
+body div.container footer div.info_block:nth-last-child(2) {
   margin-right: 190px;
 }
-body .container footer .newsletter_block {
+body div.container footer div.newsletter_block {
   width: 266px;
 }
-body .container footer .newsletter_block p {
+body div.container footer div.newsletter_block p {
   margin-bottom: 20px;
 }
-body .container footer .newsletter_block input[type=email] {
+body div.container footer div.newsletter_block input[type=email] {
   text-transform: uppercase;
   height: 30px;
   width: 140px;
@@ -787,14 +813,14 @@ body .container footer .newsletter_block input[type=email] {
   margin-bottom: 45px;
   float: left;
 }
-body .container footer .newsletter_block input[type=email]::selection {
+body div.container footer div.newsletter_block input[type=email]::selection {
   background-color: #333333;
   color: #fff51f;
 }
-body .container footer .newsletter_block input[type=email]:focus {
+body div.container footer div.newsletter_block input[type=email]:focus {
   outline: none;
 }
-body .container footer .newsletter_block .submit_button {
+body div.container footer div.newsletter_block input.submit_button {
   background-color: #000;
   height: 30px;
   width: 70px;
@@ -808,64 +834,64 @@ body .container footer .newsletter_block .submit_button {
   margin-bottom: 45px;
   float: left;
 }
-body .container footer .newsletter_block .submit_button:hover {
+body div.container footer div.newsletter_block input.submit_button:hover {
   color: #fff51f;
   cursor: pointer;
 }
-body .container footer .newsletter_block .submit_button:active {
+body div.container footer div.newsletter_block input.submit_button:active {
   margin-top: 1px;
   margin-bottom: 44px;
 }
-body .container footer .newsletter_block a {
+body div.container footer div.newsletter_block a {
   float: left;
   width: 36px;
   height: 22px;
   margin-right: 10px;
 }
-body .container footer .newsletter_block a:last-child {
+body div.container footer div.newsletter_block a:last-child {
   margin-right: 0px;
 }
-body .container footer .newsletter_block .aex {
+body div.container footer div.newsletter_block a.aex {
   clear: both;
   background-image: url("img/aex.jpg");
 }
-body .container footer .newsletter_block .mastercard {
+body div.container footer div.newsletter_block a.mastercard {
   background-image: url("img/mastercard.jpg");
 }
-body .container footer .newsletter_block .maestro {
+body div.container footer div.newsletter_block a.maestro {
   background-image: url("img/maestro.jpg");
 }
-body .container footer .newsletter_block .paypal {
+body div.container footer div.newsletter_block a.paypal {
   background-image: url("img/paypal.jpg");
 }
-body .container footer .newsletter_block .discover {
+body div.container footer div.newsletter_block a.discover {
   background-image: url("img/discover.jpg");
 }
-body .container footer .newsletter_block .visa {
+body div.container footer div.newsletter_block a.visa {
   background-image: url("img/visa_straight.jpg");
 }
-body .container footer .about_block {
+body div.container footer div.about_block {
   width: 235px;
 }
-body .container footer .about_block p {
+body div.container footer div.about_block p {
   margin-bottom: 14px;
 }
-body .container footer .about_block p.contacts {
+body div.container footer div.about_block p.contacts {
   font-size: 14px;
   line-height: 14px;
 }
-body .container footer .about_block a {
+body div.container footer div.about_block a {
   color: #faef03;
 }
-body .container footer .footer_bottom {
+body div.container footer div.footer_bottom {
   margin-top: 50px;
   background-color: #333333;
   display: flex;
   flex-flow: row wrap;
-  width: 100%;
   justify-content: space-between;
+  flex: 0 1 100%;
 }
-body .container footer .footer_bottom p {
+body div.container footer div.footer_bottom p {
   color: #dad9d9;
   font-size: 12px;
   font-weight: 400;
@@ -873,7 +899,7 @@ body .container footer .footer_bottom p {
   margin: 15px 0;
   margin-left: 170px;
 }
-body .container footer .footer_bottom .social_icons {
+body div.container footer div.footer_bottom div.social_icons {
   line-height: 15px;
   margin: 15px 0;
   margin-right: 182px;
@@ -881,112 +907,108 @@ body .container footer .footer_bottom .social_icons {
   display: flex;
   justify-content: space-around;
 }
-body .container footer .footer_bottom .social_icons a {
+body div.container footer div.footer_bottom div.social_icons a {
   font-size: 15px;
 }
 
 @media screen and (max-width: 1024px) {
-  body .container {
+  body div.container {
     width: auto;
     min-width: 320px;
     justify-content: space-around;
   }
-  body .container header {
+  body div.container header {
     justify-content: inherit;
   }
-  body .container header .logo {
+  body div.container header a.logo {
     margin: 0;
   }
-  body .container header .social_icons {
+  body div.container header div.social_icons {
     margin: 50px 0;
   }
-  body .container header .welcome {
+  body div.container header div.welcome {
     margin: 50px 15px;
   }
-  body .container header .slider_title {
+  body div.container header div.slider_title {
     margin: 0;
   }
-  body .container .header_contacts_page .social_icons {
+  body div.container header.header_contacts_page div.social_icons {
     left: initial;
     right: 20px;
   }
-  body .container nav {
+  body div.container nav {
     width: auto;
     margin: 0;
-    flex-grow: 1;
+    flex: 0 1 100%;
     max-width: 320px;
   }
-  body .container nav ul ul ul {
+  body div.container nav ul ul ul {
     position: initial;
     width: auto;
   }
-  body .container nav ul ul ul li {
+  body div.container nav ul ul ul li {
     padding-left: 20px;
   }
-  body .container nav .ad_block {
+  body div.container nav section.ad_block {
     margin: 30px auto 0 auto;
   }
-  body .container .nav_home_page {
+  body div.container nav.nav_home_page {
     position: initial;
     margin: 0;
   }
-  body .container main {
+  body div.container main {
     width: auto;
     margin-left: 0;
     justify-content: space-around;
   }
-  body .container main .bread_crumbs {
+  body div.container main div.bread_crumbs {
     padding: 0 25px;
   }
-  body .container main form.contacts {
+  body div.container main form.contacts {
     border: initial;
     margin: 0;
     padding-left: 25px;
   }
-  body .container main .contact_data {
+  body div.container main div.contact_data {
     margin: 0 0 30px 0;
   }
-  body .container main [class*=products] {
+  body div.container main section[class*=products] {
     justify-content: space-around;
   }
-  body .container main .product_section .product_images {
+  body div.container main section.product_section div.product_images {
     margin-right: initial;
   }
-  body .container .main_home_page {
+  body div.container main.main_home_page {
     position: initial;
     margin-bottom: 30px;
   }
-  body .container .brands {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  body .container aside {
+  body div.container aside {
     margin-left: 0;
   }
-  body .container aside .social_catalog_page,
-body .container aside .social_product_page,
-body .container aside .social_contacts_page {
+  body div.container aside div.social_catalog_page,
+body div.container aside div.social_product_page,
+body div.container aside div.social_contacts_page {
     padding-top: 0;
   }
-  body .container footer {
+  body div.container footer {
     justify-content: space-around;
     padding-top: 0;
   }
-  body .container footer .info_block:first-child {
+  body div.container footer ul.info_block:first-child {
     margin-left: 20px;
   }
-  body .container footer .info_block:nth-last-child(2) {
+  body div.container footer div.info_block:nth-last-child(2) {
     margin-right: 20px;
   }
-  body .container footer .footer_bottom {
+  body div.container footer div.footer_bottom {
     margin-top: 30px;
     justify-content: center;
   }
-  body .container footer .footer_bottom p {
+  body div.container footer div.footer_bottom p {
     margin-left: 0;
     text-align: center;
   }
-  body .container footer .footer_bottom .social_icons {
+  body div.container footer div.footer_bottom div.social_icons {
     margin-right: 0;
   }
 }

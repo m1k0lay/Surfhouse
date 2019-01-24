@@ -22,10 +22,10 @@ body {
 
   ::selection {
     background-color: $yellow;
-    color: grey;
+    color: black;
   }
 
-  .container {
+  div.container {
     width: 1500px;
     margin: 0 auto;
     background-color: #f8f8f8;
@@ -38,9 +38,9 @@ body {
       background-color: #abeafa;
       display: flex;
       flex-flow: row wrap;
-      flex: 1 1 100%;
+      flex: 0 1 100%;
 
-      .logo {
+      a.logo {
         background-image: url('img/logo.png');
         background-repeat: no-repeat;
         width: 125px;
@@ -48,7 +48,7 @@ body {
         margin-left: 224px;
       }
 
-      .social_icons {
+      div.social_icons {
         margin-left: 787px;
         margin-top: 25px;
         width: 125px;
@@ -56,6 +56,7 @@ body {
         display: flex;
         flex-flow: row;
         justify-content: space-between;
+        align-items: center;
 
         a {
           color: white;
@@ -67,25 +68,34 @@ body {
       }
 
       // catalog.html
-      .social_icons_catalog_page {
+      div.social_icons_catalog_page {
         width: 162px;
 
-        .lang_selector {
-          text-transform: uppercase;
-          font-family: Raleway;
-          color: white;
-          font-size: 10px;
-          font-weight: 700;
-          background-color: #abeafa;
-          border: none;
+        div.lang_selector {
+          width: 22px;
+          overflow: hidden;
+
+          select {
+            text-transform: uppercase;
+            font-family: Raleway;
+            color: white;
+            font-size: 10px;
+            font-weight: 700;
+            background-color: #abeafa;
+            border: none;
+            width: 40px;
+            height: 16px;
+            position: relative;
+            top: -2px;
+          }
         }
 
-        .lang_selector:focus {
+        div.lang_selector:hover {
           outline: 1px solid $yellow;
         }
       }
 
-      .welcome {
+      div.welcome {
         background-color: $yellow;
         width: 270px;
         height: 300px;
@@ -117,7 +127,7 @@ body {
         }
       }
 
-      .slider_title {
+      div.slider_title {
         width: 300px;
         margin-left: 478px;
         margin-top: 109px;
@@ -164,14 +174,14 @@ body {
     }
 
     //product-page.html, catalog.html, contacts.html
-    .header_catalog_page,
-    .header_product_page,
-    .header_contacts_page {
+    header.header_catalog_page,
+    header.header_product_page,
+    header.header_contacts_page {
       height: 350px;
     }
 
     //contacts.html
-    .header_contacts_page {
+    header.header_contacts_page {
       padding: 0;
 
       iframe {
@@ -179,13 +189,13 @@ body {
         height: 100%;
       }
 
-      .logo {
+      a.logo {
         position: absolute;
         top: 24px;
         left: 10px;
       }
 
-      .social_icons {
+      div.social_icons {
         position: absolute;
         top: 15px;
         left: 340px;
@@ -193,7 +203,6 @@ body {
         height: 35px;
         background-color: rgba(193, 193, 193, 0.8);
         justify-content: space-around;
-        align-items: center;
       }
     }
 
@@ -201,7 +210,7 @@ body {
       width: 270px;
       margin-left: 165px;
 
-      //заголовок меню 
+      //menu header 
       >ul>li {
         background-color: #333333;
         height: 66px;
@@ -271,7 +280,7 @@ body {
         }
       }
 
-      .ad_block {
+      section.ad_block {
         background-color: #e0e0e0;
         width: 270px;
         height: 300px;
@@ -298,17 +307,17 @@ body {
       align-items: flex-start;
 
       section {
-        flex: 1 1 100%;
+        flex: 0 1 100%;
       }
 
-      .bread_crumbs {
+      div.bread_crumbs {
         height: 88px;
         text-transform: capitalize;
         font-size: 12px;
         font-weight: 400;
         line-height: 88px;
         color: #989898;
-        flex: 1 1 100%;
+        flex: 0 1 100%;
 
         span:nth-child(n+2)::before {
           content: "\00BB\00A0";
@@ -325,23 +334,22 @@ body {
         }
       }
 
-      //home.html
-      .new_products {
+      //index.html
+      section.new_products {
         background-color: #f8f8f8;
       }
 
-      //home.html
-      .top_products,
-      .sale_products {
+      //index.html
+      section.top_products,
+      section.sale_products {
         margin-top: 50px;
       }
 
-      //home.html, catalog.html, product-page.html
+      //index.html, catalog.html, product-page.html
       [class*="products"] {
         padding-top: 43px;
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
         justify-content: space-between;
         position: relative;
 
@@ -365,7 +373,7 @@ body {
           margin-top: 35px;
           position: relative;
 
-          .product_name {
+          td.product_name {
             color: #333333;
             padding-left: 5px;
             width: 150px;
@@ -378,7 +386,7 @@ body {
             text-transform: uppercase;
           }
 
-          .price {
+          td.price {
             color: #333333;
             font-size: 18px;
             font-weight: 900;
@@ -391,7 +399,7 @@ body {
             overflow: hidden;
           }
 
-          .old_price {
+          td.old_price {
             color: #e24602;
             text-decoration: line-through;
             font-size: 14px;
@@ -412,7 +420,7 @@ body {
           border-right: 23px solid #e24602;
         }
 
-        // привязал текст к таблице, пока не знаю как сделать по другому
+        // привязал текст к таблице, пока не знаю как сделать лучше
         a.new table::after {
           content: "new";
           position: absolute;
@@ -450,7 +458,7 @@ body {
         }
       }
 
-      //home.html
+      //index.html
       [class~="light_style"] a {
         .product_name {
           font-weight: 600;
@@ -459,31 +467,31 @@ body {
           text-transform: capitalize;
         }
 
-        .price {
+        td.price {
           font-size: 18px;
           font-weight: 600;
           font-style: normal;
         }
 
-        .old_price {
+        td.old_price {
           font-weight: 600;
           font-style: normal;
         }
       }
 
-      //home.html, catalog.html, product-page.html
-      [class*="products"] a:hover,
-      .product_images img:hover {
+      //index.html, catalog.html, product-page.html
+      section[class*="products"] a:hover,
+      div.product_images img:hover {
         box-shadow: 0 0 10px grey;
       }
 
       //product-page.html
-      .product_section {
+      section.product_section {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-around;
 
-        .product_images {
+        div.product_images {
           height: 504px;
           margin-bottom: 76px;
           margin-right: 45px;
@@ -493,31 +501,28 @@ body {
           align-content: space-between;
           flex: 0 1 370px;
 
-          .product_image {
+          img.product_image {
             width: 100%;
             background-color: #eaeaea;
           }
 
-          .product_image_mini {
+          img.product_image_mini {
             background-color: #eaeaea;
             width: 70px;
             height: 110px;
           }
 
-          .product_image_mini:nth-child(2) {
+          img.product_image_mini:nth-child(2) {
             margin-left: 20px;
           }
 
-          .product_image_mini:last-child {
+          img.product_image_mini:last-child {
             margin-right: 20px;
-          }
-
-          .product_image_mini:last-child {
             background-color: #fff;
           }
         }
 
-        .product_info {
+        div.product_info {
           margin-bottom: 76px;
           display: inherit;
           flex-flow: inherit;
@@ -536,14 +541,14 @@ body {
             flex: 1 1 455px;
           }
 
-          .price {
+          div.price {
             margin-bottom: 27px;
             color: #111111;
             font-size: 22px;
             font-weight: 500;
             font-style: italic;
             line-height: 16px;
-            flex: 1 1 455px;
+            flex: 0 1 455px;
           }
 
           hr {
@@ -562,7 +567,7 @@ body {
             font-weight: 400;
             line-height: 20px;
             text-align: center;
-            flex: 1 1 455px;
+            flex: 0 1 455px;
           }
 
           p {
@@ -597,7 +602,7 @@ body {
           }
         }
 
-        .product_description {
+        div.product_description {
           border: 1px solid rgba(51, 51, 51, 0.1);
           position: relative;
           padding: 12px;
@@ -608,7 +613,7 @@ body {
           line-height: 15px;
         }
 
-        .product_description::before {
+        div.product_description::before {
           content: "product description";
           display: block;
           background-color: #26d2fc;
@@ -628,8 +633,8 @@ body {
       }
 
       //product-page.html
-      .might_also_like,
-      .recently_viewed {
+      section.might_also_like,
+      section.recently_viewed {
         margin-top: 100px;
 
         >h3 {
@@ -643,11 +648,14 @@ body {
       }
 
       //contacts.html
-      //Имееется свободное расстояние сверху, между bread_crumbs и формой, быть не должно, не знаю как выровнять (использую align-items: flex-start для main и align-self: flex-end для div.brands)
+      /*Имееется свободное расстояние сверху, между bread_crumbs и формой, 
+       быть не должно, не знаю как выровнять (использую align-items: flex-start 
+       для main и align-self: flex-end для div.brands) */
+
       form.contacts {
-        flex: 0 1 375px;
         display: flex;
         flex-flow: row wrap;
+        flex: 0 1 375px;
         border-right: 1px solid rgba(167, 167, 167, 0.8);
         padding-right: 25px;
 
@@ -690,11 +698,11 @@ body {
       }
 
       //contacts.html
-      .contact_data {
+      div.contact_data {
         flex: 0 1 292px;
         margin-left: 25px;
 
-        .icon {
+        svg.icon {
           color: #333333;
           font-size: 24px;
           font-weight: 400;
@@ -710,18 +718,18 @@ body {
           margin-bottom: 15px;
         }
 
-        .map_data {
+        div.map_data {
           color: #777777;
           font-size: 12px;
           font-weight: 400;
           line-height: 14px;
 
-          .icon {
+          svg.icon {
             float: left;
           }
         }
 
-        .phone_data {
+        p.phone_data {
           margin-top: 20px;
           color: #333333;
           font-size: 20px;
@@ -729,7 +737,7 @@ body {
           line-height: 20.8px
         }
 
-        .mail_data {
+        p.mail_data {
           margin-top: 20px;
           color: #333333;
           font-size: 16px;
@@ -738,7 +746,7 @@ body {
           text-decoration: underline;
         }
 
-        .also {
+        p.also {
           margin-top: 30px;
           color: #333333;
           font-size: 14px;
@@ -748,19 +756,19 @@ body {
       }
     }
 
-    // home.html
-    .nav_home_page,
-    .main_home_page {
+    // index.html
+    nav.nav_home_page,
+    main.main_home_page {
       margin-bottom: 10px;
       position: relative;
       top: -20px;
     }
 
-    .brands {
+    section.brands {
       background-color: #ffffff;
       display: flex;
       flex-flow: row wrap;
-      flex: 1 1 100%;
+      flex: 0 1 100%;
       justify-content: center;
       align-self: flex-end;
 
@@ -781,11 +789,12 @@ body {
       margin-left: 165px;
       flex: 0 1 1170px;
 
-      section.social{
+      section.social,
+      div.social {
         display: flex;
         flex-flow: row wrap;
 
-        div.instagram{
+        div.instagram {
           display: flex;
           flex-flow: row wrap;
           justify-content: space-between;
@@ -801,7 +810,7 @@ body {
             text-align: center;
 
 
-            .fa-instagram {
+            svg.fa-instagram {
               font-size: 30px;
               position: relative;
               top: 3px;
@@ -824,8 +833,10 @@ body {
           }
         }
 
-        a.facebook, a.twitter, a.pinterest {
-          flex: 1 1 390px;
+        a.facebook,
+        a.twitter,
+        a.pinterest {
+          flex: 0 1 390px;
           height: 150px;
           color: white;
           text-align: center;
@@ -846,24 +857,24 @@ body {
         }
       }
 
-      // home.html
-      .social_home_page {
+      // index.html
+      section.social_home_page {
         background-color: #eaeaea;
         padding-top: 50px;
       }
 
       // catalog.html
-      .social_catalog_page {
+      div.social_catalog_page {
         padding-top: 71px;
       }
 
       // product-page.html
-      .social_product_page {
+      div.social_product_page {
         padding-top: 84px;
       }
 
       // contacts.html
-      .social_contacts_page {
+      div.social_contacts_page {
         padding-top: 63px;
       }
     }
@@ -875,7 +886,7 @@ body {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
-      flex: 1 1 100%;
+      flex: 0 1 100%;
 
       a {
         color: #fff;
@@ -885,7 +896,8 @@ body {
         color: $yellow2;
       }
 
-      .info_block {
+      ul.info_block,
+      div.info_block {
         margin: 40px 20px 0 20px;
         font-size: 12px;
         line-height: 12px;
@@ -901,23 +913,23 @@ body {
         }
       }
 
-      .info_block>li,
-      .info_block h4 {
+      ul.info_block>li,
+      div.info_block h4 {
         margin-bottom: 10px;
         font-size: 18px;
         font-weight: 400;
         line-height: 18px;
       }
 
-      .info_block:first-child {
+      ul.info_block:first-child {
         margin-left: 190px;
       }
 
-      .info_block:nth-last-child(2) {
+      div.info_block:nth-last-child(2) {
         margin-right: 190px;
       }
 
-      .newsletter_block {
+      div.newsletter_block {
         width: 266px;
 
         p {
@@ -948,7 +960,7 @@ body {
           outline: none;
         }
 
-        .submit_button {
+        input.submit_button {
           background-color: #000;
           height: 30px;
           width: 70px;
@@ -963,12 +975,12 @@ body {
           float: left;
         }
 
-        .submit_button:hover {
+        input.submit_button:hover {
           color: $yellow;
           cursor: pointer;
         }
 
-        .submit_button:active {
+        input.submit_button:active {
           margin-top: 1px;
           margin-bottom: 44px;
         }
@@ -984,33 +996,33 @@ body {
           margin-right: 0px;
         }
 
-        .aex {
+        a.aex {
           clear: both;
           background-image: url("img/aex.jpg");
         }
 
-        .mastercard {
+        a.mastercard {
           background-image: url("img/mastercard.jpg");
         }
 
-        .maestro {
+        a.maestro {
           background-image: url("img/maestro.jpg");
         }
 
-        .paypal {
+        a.paypal {
           background-image: url("img/paypal.jpg");
         }
 
-        .discover {
+        a.discover {
           background-image: url("img/discover.jpg");
         }
 
-        .visa {
+        a.visa {
           background-image: url("img/visa_straight.jpg");
         }
       }
 
-      .about_block {
+      div.about_block {
         width: 235px;
 
         p {
@@ -1027,13 +1039,13 @@ body {
         }
       }
 
-      .footer_bottom {
+      div.footer_bottom {
         margin-top: 50px;
         background-color: #333333;
         display: flex;
         flex-flow: row wrap;
-        width: 100%;
         justify-content: space-between;
+        flex: 0 1 100%;
 
 
         p {
@@ -1045,7 +1057,7 @@ body {
           margin-left: 170px;
         }
 
-        .social_icons {
+        div.social_icons {
           line-height: 15px;
           margin: 15px 0;
           margin-right: 182px;
@@ -1064,7 +1076,7 @@ body {
 
 @media screen and (max-width: 1024px) {
   body {
-    .container {
+    div.container {
       width: auto;
       min-width: 320px;
       justify-content: space-around;
@@ -1072,25 +1084,25 @@ body {
       header {
         justify-content: inherit;
 
-        .logo {
+        a.logo {
           margin: 0;
         }
 
-        .social_icons {
+        div.social_icons {
           margin: 50px 0;
         }
 
-        .welcome {
+        div.welcome {
           margin: 50px 15px;
         }
 
-        .slider_title {
+        div.slider_title {
           margin: 0;
         }
       }
 
-      .header_contacts_page {
-        .social_icons {
+      header.header_contacts_page {
+        div.social_icons {
           left: initial;
           right: 20px;
         }
@@ -1099,7 +1111,7 @@ body {
       nav {
         width: auto;
         margin: 0;
-        flex-grow: 1;
+        flex: 0 1 100%;
         max-width: 320px;
 
         ul {
@@ -1115,12 +1127,12 @@ body {
           }
         }
 
-        .ad_block {
+        section.ad_block {
           margin: 30px auto 0 auto;
         }
       }
 
-      .nav_home_page {
+      nav.nav_home_page {
         position: initial;
         margin: 0;
       }
@@ -1130,7 +1142,7 @@ body {
         margin-left: 0;
         justify-content: space-around;
 
-        .bread_crumbs {
+        div.bread_crumbs {
           padding: 0 25px;
         }
 
@@ -1140,37 +1152,32 @@ body {
           padding-left: 25px;
         }
 
-        .contact_data {
+        div.contact_data {
           margin: 0 0 30px 0;
         }
 
-        [class*="products"] {
+        section[class*="products"] {
           justify-content: space-around;
         }
 
-        .product_section {
-          .product_images {
+        section.product_section {
+          div.product_images {
             margin-right: initial;
           }
         }
       }
 
-      .main_home_page {
+      main.main_home_page {
         position: initial;
         margin-bottom: 30px;
-      }
-
-      .brands {
-        flex-direction: row;
-        flex-wrap: wrap;
       }
 
       aside {
         margin-left: 0;
 
-        .social_catalog_page,
-        .social_product_page,
-        .social_contacts_page {
+        div.social_catalog_page,
+        div.social_product_page,
+        div.social_contacts_page {
           padding-top: 0;
         }
       }
@@ -1179,15 +1186,15 @@ body {
         justify-content: space-around;
         padding-top: 0;
 
-        .info_block:first-child {
+        ul.info_block:first-child {
           margin-left: 20px;
         }
 
-        .info_block:nth-last-child(2) {
+        div.info_block:nth-last-child(2) {
           margin-right: 20px;
         }
 
-        .footer_bottom {
+        div.footer_bottom {
           margin-top: 30px;
           justify-content: center;
 
@@ -1196,7 +1203,7 @@ body {
             text-align: center;
           }
 
-          .social_icons {
+          div.social_icons {
             margin-right: 0;
           }
         }
