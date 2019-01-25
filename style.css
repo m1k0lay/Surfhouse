@@ -468,7 +468,6 @@ body div.container main section.product_section div.product_info div.price {
 }
 body div.container main section.product_section div.product_info hr {
   color: rgba(51, 51, 51, 0.1);
-  size: 1px;
   flex: 0 1 390px;
   height: 0;
 }
