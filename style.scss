@@ -1,5 +1,5 @@
 body {
-  font-family: Roboto;
+  font-family: "Roboto", "Arial", sans-serif;
 
   * {
     margin: 0;
@@ -34,22 +34,31 @@ body {
 
     header {
       position: relative;
-      padding: 24px 10px 64px 10px;
+      padding: 25px 10px 64px 10px;
       background-color: #abeafa;
       display: flex;
+      justify-content: space-between;
       flex-flow: row wrap;
-      flex: 0 1 100%;
+      flex-basis: 100%;
 
-      a.logo {
-        background-image: url('img/logo.png');
+      .header-top {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        flex-basis: 100%;
+        margin-bottom: 200px;
+      }
+
+      .logo {
+        background-image: url("img/logo.png");
         background-repeat: no-repeat;
         width: 125px;
         height: 111px;
         margin-left: 224px;
       }
 
-      div.social_icons {
-        margin-left: 787px;
+      .social_icons {
+        margin-right: 290px;
         margin-top: 25px;
         width: 125px;
         height: 16px;
@@ -68,16 +77,16 @@ body {
       }
 
       // catalog.html
-      div.social_icons_catalog_page {
+      .social_icons_catalog_page {
         width: 162px;
 
-        div.lang_selector {
+        .lang_selector {
           width: 22px;
           overflow: hidden;
 
           select {
             text-transform: uppercase;
-            font-family: Raleway;
+            font-family: "Raleway";
             color: white;
             font-size: 10px;
             font-weight: 700;
@@ -90,21 +99,21 @@ body {
           }
         }
 
-        div.lang_selector:hover {
+        .lang_selector:hover {
           outline: 1px solid $yellow;
         }
       }
 
-      div.welcome {
+
+      .welcome {
         background-color: $yellow;
         width: 270px;
         height: 300px;
-        margin-top: 201px;
         margin-left: 155px;
         padding: 79px 31px 0 20px;
 
         h3 {
-          font-family: Raleway;
+          font-family: "Raleway";
           color: #333333;
           font-size: 30px;
           font-weight: 700;
@@ -115,7 +124,7 @@ body {
         }
 
         p {
-          font-family: Raleway;
+          font-family: "Raleway";
           color: #333333;
           font-size: 18px;
           font-weight: 700;
@@ -127,10 +136,13 @@ body {
         }
       }
 
-      div.slider_title {
+      .slider_title {
         width: 300px;
-        margin-left: 478px;
-        margin-top: 109px;
+        max-height: 390px;
+        position: absolute;
+        top: 240px;
+        left: 910px;
+        overflow: hidden;
 
         h3 {
           color: $yellow;
@@ -147,6 +159,7 @@ body {
           font-weight: 400;
           line-height: 24px;
           text-align: left;
+          overflow: hidden;
         }
 
         input[type="button"] {
@@ -174,14 +187,14 @@ body {
     }
 
     //product-page.html, catalog.html, contacts.html
-    header.header_catalog_page,
-    header.header_product_page,
-    header.header_contacts_page {
+    .header_catalog_page,
+    .header_product_page,
+    .header_contacts_page {
       height: 350px;
     }
 
     //contacts.html
-    header.header_contacts_page {
+    .header_contacts_page {
       padding: 0;
 
       iframe {
@@ -198,7 +211,7 @@ body {
       div.social_icons {
         position: absolute;
         top: 15px;
-        left: 340px;
+        right: 10px;
         width: 200px;
         height: 35px;
         background-color: rgba(193, 193, 193, 0.8);
@@ -210,8 +223,8 @@ body {
       width: 270px;
       margin-left: 165px;
 
-      //menu header 
-      >ul>li {
+      //menu header
+      > ul > li {
         background-color: #333333;
         height: 66px;
         padding-left: 42px;
@@ -280,7 +293,7 @@ body {
         }
       }
 
-      section.ad_block {
+      .ad_block {
         background-color: #e0e0e0;
         width: 270px;
         height: 300px;
@@ -310,7 +323,7 @@ body {
         flex: 0 1 100%;
       }
 
-      div.bread_crumbs {
+      .bread_crumbs {
         height: 88px;
         text-transform: capitalize;
         font-size: 12px;
@@ -335,13 +348,13 @@ body {
       }
 
       //index.html
-      section.new_products {
+      .new_products {
         background-color: #f8f8f8;
       }
 
       //index.html
-      section.top_products,
-      section.sale_products {
+      .top_products,
+      .sale_products {
         margin-top: 50px;
       }
 
@@ -365,7 +378,7 @@ body {
         }
 
         a {
-          background-color: #fff;
+          background-color: #ffffff;
           display: block;
           width: 270px;
           height: 320px;
@@ -373,7 +386,7 @@ body {
           margin-top: 35px;
           position: relative;
 
-          td.product_name {
+          .product_name {
             color: #333333;
             padding-left: 5px;
             width: 150px;
@@ -386,7 +399,7 @@ body {
             text-transform: uppercase;
           }
 
-          td.price {
+          .price {
             color: #333333;
             font-size: 18px;
             font-weight: 900;
@@ -399,7 +412,7 @@ body {
             overflow: hidden;
           }
 
-          td.old_price {
+          .old_price {
             color: #e24602;
             text-decoration: line-through;
             font-size: 14px;
@@ -410,7 +423,7 @@ body {
           }
         }
 
-        a.new::after {
+        .new::after {
           content: "";
           position: absolute;
           top: 0;
@@ -421,7 +434,7 @@ body {
         }
 
         // привязал текст к таблице, пока не знаю как сделать лучше
-        a.new table::after {
+        .new table::after {
           content: "new";
           position: absolute;
           top: 10px;
@@ -434,7 +447,7 @@ body {
           z-index: 1;
         }
 
-        a.hot::after {
+        .hot::after {
           content: "";
           position: absolute;
           top: 0;
@@ -444,13 +457,13 @@ body {
           border-right: 23px solid $yellow2;
         }
 
-        a.hot table::after {
+        .hot table::after {
           content: "hot";
           position: absolute;
           top: 10px;
           right: 7px;
           text-transform: uppercase;
-          color: #000;
+          color: #000000;
           font-size: 9px;
           font-weight: 400;
           text-align: center;
@@ -467,13 +480,13 @@ body {
           text-transform: capitalize;
         }
 
-        td.price {
+        .price {
           font-size: 18px;
           font-weight: 600;
           font-style: normal;
         }
 
-        td.old_price {
+        .old_price {
           font-weight: 600;
           font-style: normal;
         }
@@ -481,17 +494,17 @@ body {
 
       //index.html, catalog.html, product-page.html
       section[class*="products"] a:hover,
-      div.product_images img:hover {
+      .product_images img:hover {
         box-shadow: 0 0 10px grey;
       }
 
       //product-page.html
-      section.product_section {
+      .product_section {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-around;
 
-        div.product_images {
+        .product_images {
           height: 504px;
           margin-bottom: 76px;
           margin-right: 45px;
@@ -501,28 +514,28 @@ body {
           align-content: space-between;
           flex: 0 1 370px;
 
-          img.product_image {
+          .product_image {
             width: 100%;
             background-color: #eaeaea;
           }
 
-          img.product_image_mini {
+          .product_image_mini {
             background-color: #eaeaea;
             width: 70px;
             height: 110px;
           }
 
-          img.product_image_mini:nth-child(2) {
+          .product_image_mini:nth-child(2) {
             margin-left: 20px;
           }
 
-          img.product_image_mini:last-child {
+          .product_image_mini:last-child {
             margin-right: 20px;
-            background-color: #fff;
+            background-color: #ffffff;
           }
         }
 
-        div.product_info {
+        .product_info {
           margin-bottom: 76px;
           display: inherit;
           flex-flow: inherit;
@@ -541,7 +554,7 @@ body {
             flex: 1 1 455px;
           }
 
-          div.price {
+          .price {
             margin-bottom: 27px;
             color: #111111;
             font-size: 22px;
@@ -592,7 +605,7 @@ body {
           }
 
           input:hover {
-            background-color: #FB6201;
+            background-color: #fb6201;
           }
 
           input:active {
@@ -601,18 +614,18 @@ body {
           }
         }
 
-        div.product_description {
+        .product_description {
           border: 1px solid rgba(51, 51, 51, 0.1);
           position: relative;
           padding: 12px;
-          font-family: Verdana;
+          font-family: "Verdana";
           color: #808080;
           font-size: 11px;
           font-weight: 400;
           line-height: 15px;
         }
 
-        div.product_description::before {
+        .product_description::before {
           content: "product description";
           display: block;
           background-color: #26d2fc;
@@ -632,12 +645,12 @@ body {
       }
 
       //product-page.html
-      section.might_also_like,
-      section.recently_viewed {
+      .might_also_like,
+      .recently_viewed {
         margin-top: 100px;
 
-        >h3 {
-          font-family: Raleway;
+        > h3 {
+          font-family: "Raleway";
           color: #333333;
           font-size: 30px;
           font-weight: 700;
@@ -647,19 +660,19 @@ body {
       }
 
       //contacts.html
-      /*Имееется свободное расстояние сверху, между bread_crumbs и формой, 
-       быть не должно, не знаю как выровнять (использую align-items: flex-start 
+      /*Имееется свободное расстояние сверху, между bread_crumbs и формой,
+       быть не должно, не знаю как выровнять (использую align-items: flex-start
        для main и align-self: flex-end для div.brands) */
 
-      form.contacts {
+      .contacts {
         display: flex;
         flex-flow: row wrap;
         flex: 0 1 375px;
         border-right: 1px solid rgba(167, 167, 167, 0.8);
         padding-right: 25px;
 
-        input[type=text],
-        input[type=email],
+        input[type="text"],
+        input[type="email"],
         textarea {
           border-style: solid;
           border-width: 1px;
@@ -697,7 +710,7 @@ body {
       }
 
       //contacts.html
-      div.contact_data {
+      .contact_data {
         flex: 0 1 292px;
         margin-left: 25px;
 
@@ -717,7 +730,7 @@ body {
           margin-bottom: 15px;
         }
 
-        div.map_data {
+        .map_data {
           color: #777777;
           font-size: 12px;
           font-weight: 400;
@@ -728,15 +741,15 @@ body {
           }
         }
 
-        p.phone_data {
+        .phone_data {
           margin-top: 20px;
           color: #333333;
           font-size: 20px;
           font-weight: 600;
-          line-height: 20.8px
+          line-height: 20.8px;
         }
 
-        p.mail_data {
+        .mail_data {
           margin-top: 20px;
           color: #333333;
           font-size: 16px;
@@ -745,7 +758,7 @@ body {
           text-decoration: underline;
         }
 
-        p.also {
+        .also {
           margin-top: 30px;
           color: #333333;
           font-size: 14px;
@@ -756,14 +769,14 @@ body {
     }
 
     // index.html
-    nav.nav_home_page,
-    main.main_home_page {
+    .nav_home_page,
+    .main_home_page {
       margin-bottom: 10px;
       position: relative;
       top: -20px;
     }
 
-    section.brands {
+    .brands {
       background-color: #ffffff;
       display: flex;
       flex-flow: row wrap;
@@ -788,18 +801,18 @@ body {
       margin-left: 165px;
       flex: 0 1 1170px;
 
-      section.social,
-      div.social {
+      .social,
+      .social {
         display: flex;
         flex-flow: row wrap;
 
-        div.instagram {
+        .instagram {
           display: flex;
           flex-flow: row wrap;
           justify-content: space-between;
           margin-bottom: 60px;
 
-          p.instagram_feed {
+          .instagram_feed {
             flex: 0 1 100%;
             margin-bottom: 30px;
             color: #333333;
@@ -832,10 +845,10 @@ body {
           }
         }
 
-        a.facebook,
-        a.twitter,
-        a.pinterest {
-          flex: 0 1 390px;
+        .facebook,
+        .twitter,
+        .pinterest {
+          flex: 1 1 390px;
           height: 150px;
           color: white;
           text-align: center;
@@ -843,44 +856,44 @@ body {
           line-height: 150px;
         }
 
-        a.facebook {
+        .facebook {
           background-color: #3b5997;
         }
 
-        a.twitter {
+        .twitter {
           background-color: #3fccfd;
         }
 
-        a.pinterest {
+        .pinterest {
           background-color: #cb2027;
         }
       }
 
       // index.html
-      section.social_home_page {
+      .social_home_page {
         background-color: #eaeaea;
         padding-top: 50px;
       }
 
       // catalog.html
-      div.social_catalog_page {
+      .social_catalog_page {
         padding-top: 71px;
       }
 
       // product-page.html
-      div.social_product_page {
+      .social_product_page {
         padding-top: 84px;
       }
 
       // contacts.html
-      div.social_contacts_page {
+      .social_contacts_page {
         padding-top: 63px;
       }
     }
 
     footer {
       background-color: #373737;
-      color: #fff;
+      color: #ffffff;
       padding-top: 30px;
       display: flex;
       flex-flow: row wrap;
@@ -888,15 +901,14 @@ body {
       flex: 0 1 100%;
 
       a {
-        color: #fff;
+        color: #ffffff;
       }
 
       a:hover {
         color: $yellow2;
       }
 
-      ul.info_block,
-      div.info_block {
+      .info_block {
         margin: 40px 20px 0 20px;
         font-size: 12px;
         line-height: 12px;
@@ -912,7 +924,7 @@ body {
         }
       }
 
-      ul.info_block>li,
+      ul.info_block > li,
       div.info_block h4 {
         margin-bottom: 10px;
         font-size: 18px;
@@ -960,10 +972,10 @@ body {
         }
 
         input.submit_button {
-          background-color: #000;
+          background-color: #000000;
           height: 30px;
           width: 70px;
-          color: #fff;
+          color: #ffffff;
           font-size: 12px;
           font-weight: 400;
           line-height: 30px;
@@ -992,36 +1004,36 @@ body {
         }
 
         a:last-child {
-          margin-right: 0px;
+          margin-right: 0;
         }
 
-        a.aex {
+        .aex {
           clear: both;
           background-image: url("img/aex.jpg");
         }
 
-        a.mastercard {
+        .mastercard {
           background-image: url("img/mastercard.jpg");
         }
 
-        a.maestro {
+        .maestro {
           background-image: url("img/maestro.jpg");
         }
 
-        a.paypal {
+        .paypal {
           background-image: url("img/paypal.jpg");
         }
 
-        a.discover {
+        .discover {
           background-image: url("img/discover.jpg");
         }
 
-        a.visa {
+        .visa {
           background-image: url("img/visa_straight.jpg");
         }
       }
 
-      div.about_block {
+      .about_block {
         width: 235px;
 
         p {
@@ -1038,7 +1050,7 @@ body {
         }
       }
 
-      div.footer_bottom {
+      .footer_bottom {
         margin-top: 50px;
         background-color: #333333;
         display: flex;
@@ -1056,7 +1068,7 @@ body {
           margin-left: 170px;
         }
 
-        div.social_icons {
+        .social_icons {
           line-height: 15px;
           margin: 15px 0;
           margin-right: 182px;
@@ -1083,6 +1095,10 @@ body {
       header {
         justify-content: inherit;
 
+        .header-top {
+          justify-content: inherit;
+        }
+
         a.logo {
           margin: 0;
         }
@@ -1097,6 +1113,7 @@ body {
 
         div.slider_title {
           margin: 0;
+          position: initial;
         }
       }
 
