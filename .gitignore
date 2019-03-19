@@ -1,1 +1,6 @@
 psd/
+node_modules/
+npm-debug.*
+Thumbs.db
+build/
+todo*
