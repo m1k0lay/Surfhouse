@@ -6,7 +6,7 @@ function css() {
   return gulp.src('./style.scss')
     .pipe(sass())
     .pipe(gulp.dest('./'))
-    .pipe(server.reload({stream:true}))
+    .pipe(server.reload({stream:true}));
 }
 
 function reload(done) {
@@ -16,14 +16,15 @@ function reload(done) {
 
 function serve(done) {
   server.init({
+    notify: false,
     server: './'
   });
   done();
 }
 
-function watch(){
-  gulp.watch('./*.html', reload)
-  gulp.watch('./style.scss', css)
+function watch() {
+  gulp.watch('./*.html', reload);
+  gulp.watch('./style.scss', css);
 }
 
 const build = gulp.series(css);
